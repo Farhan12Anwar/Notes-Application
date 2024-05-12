@@ -1,38 +1,125 @@
-.App {
+/* Add some basic styles */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* Ensure relative positioning for absolute elements */
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-section {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Center vertically */
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-section input[type='text'] {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-section button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  /* Make button circular */
+  padding: 20px;
+  /* Adjust padding */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+.search-bar{
+  margin-left: 10px;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.note {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Add box-shadow transition */
+}
+
+.note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Add hover box shadow */
+}
+
+.note-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.note-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+.note-actions button:hover {
+  color: #0056b3;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+/* Positioning for the add note button */
+.add-note-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
